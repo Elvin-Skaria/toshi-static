@@ -52,19 +52,19 @@ const Header: React.FC = () => {
                         src={Twitter}
                         alt="twitter"
                         w={6}
-                    //   onClick={() => ('/')}
+                        onClick={() => window.open('https://twitter.com/TOSHI_BASE', '_blank')}
                     />
                     <Image
                         src={Telegram}
                         alt="telegram"
                         w={6}
-                    //   onClick={() => ('/')}
+                        onClick={() => window.open('https://t.me/toshibase', '_blank')}
                     />
                     <Image
                         src={Medium}
                         alt="medium"
                         w={6}
-                    //   onClick={() => ('/')}
+                        onClick={() => window.open('https://medium.com/@ToshiBase', '_blank')}
                     />
                 </Flex>
 

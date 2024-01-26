@@ -5,6 +5,7 @@ import TextWrapper from '../components/TextWrapper';
 import addBase from '../assets/images/HowTo/addBase.svg';
 import bridgeBase from '../assets/images/HowTo/bridgeBase.svg';
 import buyToshi from '../assets/images/HowTo/buyToshi.svg';
+import VideoModal from '../modules/VideoModal';
 
 const dataArray = [
     {
@@ -25,8 +26,10 @@ const dataArray = [
 ]
 
 const HowToSection = () => {
+    const [openModal, setOpenModal] = React.useState(false);
     return (
         <Flex minH={'110vh'} alignItems={'center'} flexDirection={'column'} >
+            <VideoModal openModal={openModal} closeModal={() => setOpenModal(false)} videoSrc='' />
             <TextWrapper text='how to' fontFamily='Prototype' fontSize={60} Fcolor='#2C70FE' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FF7802' align='center' className='m-b-16' />
             <HStack spacing={5}>
@@ -51,6 +54,7 @@ const HowToSection = () => {
                             _hover={{
                                 border: '1px solid #FFFFFF',
                             }}
+                            onClick={() => setOpenModal(true)}
                         >
                             <TextWrapper text={data.buttonText} Fcolor='#FFFFFF' align='center' />
                         </Button>

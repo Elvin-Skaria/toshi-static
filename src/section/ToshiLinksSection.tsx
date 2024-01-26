@@ -21,37 +21,37 @@ const toshiLinks = [
         image: sushiswap,
         title: 'sushiswap',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ',
-        redirect: '',
+        redirect: 'https://www.sushi.com/swap?token1=0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4&chainId=8453&token0=',
     },
     {
         image: Poloniex,
         title: 'Poloniex',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ',
-        redirect: '',
+        redirect: 'https://poloniex.com/trade/TOSHI_USDT?type=spot ',
     },
     {
         image: bitmart,
         title: 'bitmart',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ',
-        redirect: '',
+        redirect: 'https://www.bitmart.com/trade/en-US?symbol=TOSHI_USDT&layout=pro',
     },
     {
         image: bitrue,
         title: 'bitrue',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ',
-        redirect: '',
+        redirect: 'https://www.bitrue.com/trade/toshi_usdt ',
     },
     {
         image: bing,
         title: 'bing',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ',
-        redirect: '',
+        redirect: 'https://bingx.com/en-us/spot/TOSHIUSDT/ ',
     },
     {
         image: uniswap,
         title: 'uniswap',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ',
-        redirect: '',
+        redirect: '/',
     },
 
 ]
@@ -60,27 +60,27 @@ const toshiLinks2 = [
     {
         image: coingecko,
         title: 'coingecko',
-        redirect: '',
+        redirect: 'https://www.coingecko.com/en/coins/toshi',
     },
     {
         image: coinmarketcap,
         title: 'coinmarketcap',
-        redirect: '',
+        redirect: 'https://coinmarketcap.com/currencies/toshithecat/',
     },
     {
         image: basescan,
         title: 'basescan',
-        redirect: '',
+        redirect: 'https://basescan.org/token/0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4',
     },
     {
         image: dextools,
         title: 'dextools',
-        redirect: '',
+        redirect: 'https://www.dextools.io/app/en/base/pair-explorer/0xbfc74e1de81e81b0a807469502f6662cc238795e',
     },
     {
         image: dexscreener,
         title: 'dexscreener',
-        redirect: '',
+        redirect: 'https://dexscreener.com/base/0xbfc74e1de81e81b0a807469502f6662cc238795e',
     },
 
 ]
@@ -108,6 +108,7 @@ const ToshiLinksSection = () => {
                         _hover={{
                             boxShadow: '0px 4px 20px #FFFFFF inset, 0px 0px 8px 4px #27D2E9',
                         }}
+                        onClick={() => window.open(item.redirect, '_blank')}
                     >
                         <Image src={item.image} alt={item.image} aspectRatio={'3/2'} objectFit={'contain'} width={'150px'} />
                         <TextWrapper
@@ -152,7 +153,13 @@ const ToshiLinksSection = () => {
             <Flex justifyContent={'center'}>
                 <HStack spacing={10}>
                     {toshiLinks2.map((item, index) => (
-                        <Flex flexDirection={'column'} key={index} justifyContent={'center'} alignItems={'center'}>
+                        <Flex
+                            key={index}
+                            flexDirection={'column'}
+                            justifyContent={'center'}
+                            alignItems={'center'}
+                            cursor={'pointer'}
+                            onClick={() => window.open(item.redirect, '_blank')}>
                             <Image src={item.image} alt={item.image} objectFit={'contain'} mb={5} />
                             <TextWrapper text={item.title} fontSize={16} Fcolor='#FFFFFF' align='center' />
                         </Flex>

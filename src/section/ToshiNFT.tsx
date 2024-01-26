@@ -26,6 +26,7 @@ const ToshiNFT = () => {
                     _hover={{
                         border: '1px solid #FFFFFF',
                     }}
+                    onClick={() => window.open(' https://opensea.io/collection/nftoshis-official', '_blank')}
                 >
                     <TextWrapper text='open sea' fontFamily='Prototype' Fcolor='#FFFFFF' />
                 </Button>
@@ -36,6 +37,8 @@ const ToshiNFT = () => {
                     _hover={{
                         border: '1px solid #FFFFFF',
                     }}
+                    onClick={() => window.open(' https://opensea.io/collection/nftoshis-official', '_blank')}
+
                 >
                     <TextWrapper text='open sea' fontFamily='Prototype' Fcolor='#FFFFFF' />
                 </Button>
