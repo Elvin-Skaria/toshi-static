@@ -6,6 +6,7 @@ import {
 import Header from "./modules/Header"
 import HeroSection from "./section/HeroSection"
 import ToshiLinksSection from "./section/ToshiLinksSection"
+import HowToSection from "./section/HowToSection"
 
 import FullBackground from "./assets/images/full_background.svg"
 
@@ -21,6 +22,7 @@ export const App = () => (
       <Header />
       <HeroSection />
       <ToshiLinksSection />
+      <HowToSection />
     </Box>
   </ChakraProvider>
 )

@@ -72,6 +72,9 @@ const Header: React.FC = () => {
                     background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
                     borderRadius={'30px'}
                     minW={'150px'}
+                    _hover={{
+                        border: '1px solid #FFFFFF',
+                    }}
                 >
                     <TextWrapper text='trade now' fontFamily='Prototype' Fcolor='#FFFFFF' />
                 </Button>

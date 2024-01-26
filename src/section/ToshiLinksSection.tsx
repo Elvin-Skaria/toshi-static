@@ -127,10 +127,25 @@ const ToshiLinksSection = () => {
                 ))}
             </Flex>
             <Flex justifyContent={'center'} mb={20}>
-                <Button border={'1px solid #FFFFFF'} background={'none'} borderRadius={'30px'} w={200} mr={5}>
+                <Button
+                    border={'1px solid #FFFFFF'}
+                    background={'none'}
+                    borderRadius={'30px'}
+                    w={200}
+                    mr={5}
+                    _hover={{
+                        background: 'linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)',
+                    }}>
                     <TextWrapper text='Toshi’s stickerpack' fontFamily='Prototype' Fcolor='#FFFFFF' />
                 </Button>
-                <Button border={'1px solid #FFFFFF'} background={'none'} borderRadius={'30px'} w={200}>
+                <Button
+                    border={'1px solid #FFFFFF'}
+                    background={'none'}
+                    borderRadius={'30px'}
+                    w={200}
+                    _hover={{
+                        background: 'linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)',
+                    }}>
                     <TextWrapper text='Toshi’s stickerpack' fontFamily='Prototype' Fcolor='#FFFFFF' />
                 </Button>
             </Flex>
