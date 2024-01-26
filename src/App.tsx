@@ -10,6 +10,8 @@ import HowToSection from "./section/HowToSection"
 
 import FullBackground from "./assets/images/full_background.svg"
 import ToolBoxSection from "./section/ToolBoxSection"
+import ToshiNFT from "./section/ToshiNFT"
+import Footer from "./modules/Footer"
 
 
 export const App = () => (
@@ -18,13 +20,16 @@ export const App = () => (
       backgroundImage={FullBackground}
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
-      minHeight="600vh"
-      flexDirection={'column'}>
+      minHeight="550vh"
+      flexDirection={'column'}
+    >
       <Header />
       <HeroSection />
       <ToshiLinksSection />
       <HowToSection />
       <ToolBoxSection />
+      <ToshiNFT />
+      <Footer />
     </Box>
   </ChakraProvider>
 )
