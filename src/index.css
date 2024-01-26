@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Prototype";
+  src: local("Prototype"), url("./font/Prototype/Prototype.ttf");
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.m-b-2 {
+  margin-bottom: 2px;
+}
+
+.m-b-4 {
+  margin-bottom: 4px;
+}
+
+.m-b-8 {
+  margin-bottom: 8px;
+}
+
+.m-b-16 {
+  margin-bottom: 16px;
+}
+
+.m-b-32 {
+  margin-bottom: 32px;
+}
