@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/toshi-static/static/css/main.830c5484.css",
+    "main.js": "/toshi-static/static/js/main.7dbb900a.js",
+    "static/js/787.f98a6655.chunk.js": "/toshi-static/static/js/787.f98a6655.chunk.js",
+    "static/media/full_background.svg": "/toshi-static/static/media/full_background.f817bcd9b3ce464417fce8e14a543cd8.svg",
+    "static/media/tools-launchpad.svg": "/toshi-static/static/media/tools-launchpad.d973e92b569787cc0d6f931ab87bedb7.svg",
+    "static/media/tools-swap.svg": "/toshi-static/static/media/tools-swap.2d7690d6e2c2df1a3969726344f77e10.svg",
+    "static/media/tools-token-launcher.svg": "/toshi-static/static/media/tools-token-launcher.a9ff7d3a29cf1ff8f5b08cbebe305e92.svg",
+    "static/media/tools-default.svg": "/toshi-static/static/media/tools-default.26bc2575f20d5aa9ca6ab51a91f5d6f8.svg",
+    "static/media/tools-multisender.svg": "/toshi-static/static/media/tools-multisender.095e5da5db8ccc9df72f0ebea25af452.svg",
+    "static/media/tools-token-locker.svg": "/toshi-static/static/media/tools-token-locker.61f6185366e42f1e3ad5f7ba6ead1a95.svg",
+    "static/media/Toshi_Text.png": "/toshi-static/static/media/Toshi_Text.c288e36533b783903a89.png",
+    "static/media/bridgeBase.svg": "/toshi-static/static/media/bridgeBase.704f814fac230829f6963038aaf4e039.svg",
+    "static/media/coingecko.svg": "/toshi-static/static/media/coingecko.91e7cdca89843d960d2dbf492fcc8964.svg",
+    "static/media/buyToshi.svg": "/toshi-static/static/media/buyToshi.dae1e1907772e8d4614a53f73571bd32.svg",
+    "static/media/addBase.svg": "/toshi-static/static/media/addBase.36639efbda480d9cbb03e95b60d364dd.svg",
+    "static/media/sushiswap.svg": "/toshi-static/static/media/sushiswap.23202e75ebf1d0c4c1e364d93104c3d9.svg",
+    "static/media/dextool.svg": "/toshi-static/static/media/dextool.976b55cbed5b24a89c962b76b629edba.svg",
+    "static/media/bitmart.svg": "/toshi-static/static/media/bitmart.8c3db8f253985d72b465d1e5ddbd6bf7.svg",
+    "static/media/Prototype.ttf": "/toshi-static/static/media/Prototype.be9924a47c44090561d7.ttf",
+    "static/media/bitrue.svg": "/toshi-static/static/media/bitrue.1fe01e6f37968e21c1253e82db567a3c.svg",
+    "static/media/Poloniex.svg": "/toshi-static/static/media/Poloniex.6f7b99743d09eca9d141390c19d154e8.svg",
+    "static/media/dexscreener.svg": "/toshi-static/static/media/dexscreener.15b1c0a75253bf182481320e9e209cfc.svg",
+    "static/media/uniswap.svg": "/toshi-static/static/media/uniswap.0fd37b6a1f448f5d1145b908fc75fe3d.svg",
+    "static/media/bing.svg": "/toshi-static/static/media/bing.9bec5a8ce64ad48f4820935fdc9a5882.svg",
+    "static/media/basescan.svg": "/toshi-static/static/media/basescan.dba6013c84b6b54eef7a8d52bed54d5a.svg",
+    "static/media/social-twitter.svg": "/toshi-static/static/media/social-twitter.a10931daf1014cde13253c3a391cf31a.svg",
+    "static/media/coinmarketcap.svg": "/toshi-static/static/media/coinmarketcap.3ed489770b90092d3fef960efbd2c614.svg",
+    "static/media/social-telegram.svg": "/toshi-static/static/media/social-telegram.27733f3a91a2bb683d5ecf219acdee1b.svg",
+    "index.html": "/toshi-static/index.html",
+    "static/media/social-medium.svg": "/toshi-static/static/media/social-medium.2756022e4e4554df338b16adb8ed4425.svg",
+    "main.830c5484.css.map": "/toshi-static/static/css/main.830c5484.css.map",
+    "main.7dbb900a.js.map": "/toshi-static/static/js/main.7dbb900a.js.map",
+    "787.f98a6655.chunk.js.map": "/toshi-static/static/js/787.f98a6655.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.830c5484.css",
+    "static/js/main.7dbb900a.js"
+  ]
+}
