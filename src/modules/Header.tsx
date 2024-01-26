@@ -53,18 +53,21 @@ const Header: React.FC = () => {
                         alt="twitter"
                         w={6}
                         onClick={() => window.open('https://twitter.com/TOSHI_BASE', '_blank')}
+                        cursor={'pointer'}
                     />
                     <Image
                         src={Telegram}
                         alt="telegram"
                         w={6}
                         onClick={() => window.open('https://t.me/toshibase', '_blank')}
+                        cursor={'pointer'}
                     />
                     <Image
                         src={Medium}
                         alt="medium"
                         w={6}
                         onClick={() => window.open('https://medium.com/@ToshiBase', '_blank')}
+                        cursor={'pointer'}
                     />
                 </Flex>
 

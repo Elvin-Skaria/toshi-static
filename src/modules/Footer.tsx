@@ -20,6 +20,7 @@ const Footer = () => {
                         alt="twitter"
                         w={6}
                         onClick={() => window.open('https://twitter.com/TOSHI_BASE', '_blank')}
+                        cursor={'pointer'}
                     />
                 </Flex>
                 <Flex p={1} borderRadius={'40px'} border={'1px solid #0052FE'} justifyContent={'center'} alignItems={'center'}>
@@ -28,6 +29,7 @@ const Footer = () => {
                         alt="telegram"
                         w={6}
                         onClick={() => window.open('https://t.me/toshibase', '_blank')}
+                        cursor={'pointer'}
                     />
                 </Flex>
                 <Flex p={1} borderRadius={'40px'} border={'1px solid #0052FE'} justifyContent={'center'} alignItems={'center'}>
@@ -36,6 +38,7 @@ const Footer = () => {
                         alt="medium"
                         w={6}
                         onClick={() => window.open('https://medium.com/@ToshiBase', '_blank')}
+                        cursor={'pointer'}
                     />
                 </Flex>
             </HStack>
@@ -43,7 +46,6 @@ const Footer = () => {
                 <Image
                     src={ToshiLogo}
                     alt="toshi"
-                    //   onClick={() => ('/')}
                     width={250}
                 />
             </Box>
