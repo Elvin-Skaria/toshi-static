@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, HStack } from '@chakra-ui/react'
+import { Button, Flex, HStack } from '@chakra-ui/react'
 import TextWrapper from '../components/TextWrapper';
 
 import addBase from '../assets/images/HowTo/addBase.svg';
@@ -27,7 +27,7 @@ const dataArray = [
 const HowToSection = () => {
     return (
         <Flex minH={'110vh'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
-            <TextWrapper text='how to' fontFamily='Prototype' fontSize={42} Fcolor='#2C70FE' align='center' className='m-b-8' />
+            <TextWrapper text='how to' fontFamily='Prototype' fontSize={60} Fcolor='#2C70FE' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FF7802' align='center' className='m-b-16' />
             <HStack spacing={5}>
                 {dataArray.map((data, index) => (

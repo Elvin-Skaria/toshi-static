@@ -9,6 +9,7 @@ import ToshiLinksSection from "./section/ToshiLinksSection"
 import HowToSection from "./section/HowToSection"
 
 import FullBackground from "./assets/images/full_background.svg"
+import ToolBoxSection from "./section/ToolBoxSection"
 
 
 export const App = () => (
@@ -23,6 +24,7 @@ export const App = () => (
       <HeroSection />
       <ToshiLinksSection />
       <HowToSection />
+      <ToolBoxSection />
     </Box>
   </ChakraProvider>
 )
