@@ -26,12 +26,13 @@ const dataArray = [
 
 const HowToSection = () => {
     return (
-        <Flex minH={'110vh'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
+        <Flex minH={'110vh'} alignItems={'center'} flexDirection={'column'} >
             <TextWrapper text='how to' fontFamily='Prototype' fontSize={60} Fcolor='#2C70FE' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FF7802' align='center' className='m-b-16' />
             <HStack spacing={5}>
                 {dataArray.map((data, index) => (
                     <Flex
+                        key={index}
                         justifyContent={'center'}
                         alignItems={'flex-end'}
                         backgroundImage={data.image}

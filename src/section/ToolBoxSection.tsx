@@ -8,6 +8,8 @@ import TokenLocker from '../assets/images/Tools/tools-token-locker.svg';
 import Launchpad from '../assets/images/Tools/tools-launchpad.svg';
 import Swap from '../assets/images/Tools/tools-swap.svg';
 
+import Default from '../assets/images/Tools/tools-default.svg';
+
 
 const toolboxData = [
     {
@@ -67,7 +69,7 @@ const toolboxData = [
 ]
 
 const ToolBoxSection = () => {
-    const [toolSelected, setToolSelected] = React.useState('tokenLocker')
+    const [toolSelected, setToolSelected] = React.useState('')
 
     const selectedTool = useMemo(() => {
         return toolboxData.find(tool => tool.type === toolSelected)
@@ -83,7 +85,7 @@ const ToolBoxSection = () => {
     }
 
     return (
-        <Flex minH={'110vh'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'} border={'1px solid red'}>
+        <Flex minH={'100vh'} alignItems={'center'} flexDirection={'column'} mt={10}>
             <TextWrapper text='Toshi’s toolbox' fontFamily='Prototype' fontSize={60} Fcolor='#FFFFFF' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FFFFFF' align='center' className='m-b-16' />
 
@@ -104,55 +106,59 @@ const ToolBoxSection = () => {
                 ))}
             </HStack>
 
-            <Flex maxW={'900px'} minH={'400px'} background={'white'} borderRadius={10}>
-                <Flex flex={0.4}>
-                    <Image src={selectedTool?.image} alt='multisender' />
+            {toolSelected === '' ? <Image src={Default} w={700} /> :
+                <Flex maxW={'900px'} minH={'400px'} background={'white'} borderRadius={10}>
+                    <Flex flex={0.4}>
+                        <Image src={selectedTool?.image} alt='multisender' />
+                    </Flex>
+                    <Flex flex={0.6} px={4} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
+                        <TextWrapper
+                            text={`Toshi's ${selectedTool?.buttonText}`}
+                            fontFamily='Prototype'
+                            fontSize={32}
+                            Fcolor='#2C70FE'
+                            className='m-b-8' />
+                        <TextWrapper
+                            text={selectedTool?.desc || ''}
+                            className='m-b-16' />
+                        <TextWrapper
+                            text={selectedTool?.subTitle || ''}
+                            fontFamily='Prototype'
+                            fontSize={16}
+                            Fcolor='#2C70FE'
+                            className='m-b-16' />
+                        <TextWrapper
+                            text={selectedTool?.subDesc || ''}
+                            className='m-b-32' />
+                        <ButtonGroup spacing={3}>
+                            <Button
+                                background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
+                                borderRadius={'30px'}
+                                minW={'150px'}
+                                _hover={{
+                                    border: '1px solid #FFFFFF',
+                                }}
+                            >
+                                <TextWrapper text='See tool live' fontFamily='Prototype' Fcolor='#FFFFFF' />
+                            </Button>
+                            <Button
+                                border={'1px solid #0052FE'}
+                                background='none'
+                                borderRadius={'30px'}
+                                minW={'150px'}
+                                _hover={{
+                                    border: '1px solid #FFFFFF',
+                                }}
+                                onClick={() => onNextTool()}
+                            >
+                                <TextWrapper text='Next tool' fontFamily='Prototype' Fcolor='#0052FE' />
+                            </Button>
+                        </ButtonGroup>
+                    </Flex>
                 </Flex>
-                <Flex flex={0.6} px={4} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
-                    <TextWrapper
-                        text={`Toshi's ${selectedTool?.buttonText}`}
-                        fontFamily='Prototype'
-                        fontSize={32}
-                        Fcolor='#2C70FE'
-                        className='m-b-8' />
-                    <TextWrapper
-                        text={selectedTool?.desc || ''}
-                        className='m-b-16' />
-                    <TextWrapper
-                        text={selectedTool?.subTitle || ''}
-                        fontFamily='Prototype'
-                        fontSize={16}
-                        Fcolor='#2C70FE'
-                        className='m-b-16' />
-                    <TextWrapper
-                        text={selectedTool?.subDesc || ''}
-                        className='m-b-32' />
-                    <ButtonGroup spacing={3}>
-                        <Button
-                            background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
-                            borderRadius={'30px'}
-                            minW={'150px'}
-                            _hover={{
-                                border: '1px solid #FFFFFF',
-                            }}
-                        >
-                            <TextWrapper text='See tool live' fontFamily='Prototype' Fcolor='#FFFFFF' />
-                        </Button>
-                        <Button
-                            border={'1px solid #0052FE'}
-                            background='none'
-                            borderRadius={'30px'}
-                            minW={'150px'}
-                            _hover={{
-                                border: '1px solid #FFFFFF',
-                            }}
-                            onClick={() => onNextTool()}
-                        >
-                            <TextWrapper text='Next tool' fontFamily='Prototype' Fcolor='#0052FE' />
-                        </Button>
-                    </ButtonGroup>
-                </Flex>
-            </Flex>
+            }
+
+
         </Flex>
     )
 }
