@@ -88,7 +88,7 @@ const toshiLinks2 = [
 
 const ToshiLinksSection = () => {
     return (
-        <Box minH={'125vh'} pt={'10vh'}>
+        <Box minH={'125vh'} pt={'10vh'} border={'1px solid red'}>
             <TextWrapper text='Toshi’s favourite LINKS' fontFamily='Prototype' fontSize={60} Fcolor='#FFFFFF' align='center' />
             <Flex p={5} mt={10} overflow={'scroll'} className='scroll' mb={5}>
                 {toshiLinks.map((item, index) => (
