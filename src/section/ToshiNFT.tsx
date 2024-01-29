@@ -4,7 +4,7 @@ import TextWrapper from '../components/TextWrapper'
 
 const ToshiNFT = () => {
     return (
-        <Flex minH={'121vh'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'} pt={'20vh'} border={'1px solid red'}>
+        <Flex minH={'121vh'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'} pt={'20vh'} >
             <TextWrapper text='Toshi’s NFTs' fontFamily='Prototype' fontSize={60} Fcolor='#FFFFFF' align='center' />
             <TextWrapper text='Collections' fontFamily='Prototype' fontSize={100} Fcolor='#FF9B00' align='center' />
             <Box

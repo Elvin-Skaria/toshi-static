@@ -28,7 +28,7 @@ const dataArray = [
 const HowToSection = () => {
     const [openModal, setOpenModal] = React.useState(false);
     return (
-        <Flex minH={'110vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} border={'1px solid red'}>
+        <Flex minH={'110vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} >
             <VideoModal openModal={openModal} closeModal={() => setOpenModal(false)} videoSrc='' />
             <TextWrapper text='how to' fontFamily='Prototype' fontSize={60} Fcolor='#2C70FE' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FF7802' align='center' className='m-b-16' />
