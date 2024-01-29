@@ -2,6 +2,7 @@ import {
   Box,
   ChakraProvider,
   theme,
+  useMediaQuery,
 } from "@chakra-ui/react"
 import Header from "./modules/Header"
 import HeroSection from "./section/HeroSection"
@@ -14,22 +15,25 @@ import ToshiNFT from "./section/ToshiNFT"
 import Footer from "./modules/Footer"
 
 
-export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box
-      backgroundImage={FullBackground}
-      backgroundSize="cover"
-      backgroundRepeat="no-repeat"
-      minHeight="550vh"
-      flexDirection={'column'}
-    >
-      <Header />
-      <HeroSection />
-      <ToshiLinksSection />
-      <HowToSection />
-      <ToolBoxSection />
-      <ToshiNFT />
-      <Footer />
-    </Box>
-  </ChakraProvider>
-)
+export const App = () => {
+  const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
+  return (
+    <ChakraProvider theme={theme}>
+      <Box
+        backgroundImage={FullBackground}
+        backgroundSize={'cover'}
+        backgroundRepeat="no-repeat"
+        minHeight="550vh"
+        flexDirection={'column'}
+      >
+        {isLargerThan720 && <Header />}
+        <HeroSection />
+        <ToshiLinksSection />
+        <HowToSection />
+        <ToolBoxSection />
+        <ToshiNFT />
+        <Footer />
+      </Box>
+    </ChakraProvider>
+  )
+}

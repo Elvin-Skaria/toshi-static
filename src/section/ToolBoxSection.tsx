@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Button, ButtonGroup, Flex, HStack, Image } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Flex, HStack, Image, useMediaQuery } from '@chakra-ui/react'
 import TextWrapper from '../components/TextWrapper'
 
 import Multisender from '../assets/images/Tools/tools-multisender.svg';
@@ -70,6 +70,8 @@ const toolboxData = [
 
 const ToolBoxSection = () => {
     const [toolSelected, setToolSelected] = React.useState('')
+    const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
+
 
     const selectedTool = useMemo(() => {
         return toolboxData.find(tool => tool.type === toolSelected)
@@ -85,29 +87,31 @@ const ToolBoxSection = () => {
     }
 
     return (
-        <Flex minH={'100vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} pt={10} >
-            <TextWrapper text='Toshi’s toolbox' fontFamily='Prototype' fontSize={60} Fcolor='#FFFFFF' align='center' className='m-b-8' />
+        <Flex minH={'100vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} >
+            <TextWrapper text='Toshi’s toolbox' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#FFFFFF' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FFFFFF' align='center' className='m-b-16' />
 
-            <HStack spacing={10} mb={10}>
-                {toolboxData.map((data, index) => (
-                    <Button
-                        key={index}
-                        border={data.type === toolSelected ? '1px solid #FFFFFF' : 'none'}
-                        background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
-                        borderRadius={'30px'}
-                        minW={'150px'}
-                        _hover={{
-                            border: '1px solid #FFFFFF',
-                        }}
-                        onClick={() => setToolSelected(data.type)}>
-                        <TextWrapper text={data.buttonText} Fcolor='#FFFFFF' align='center' fontFamily='Prototype' />
-                    </Button>
-                ))}
-            </HStack>
+            <Flex overflow={'auto'} w={'100%'} mb={5} justifyContent={isLargerThan720 ? 'center' : 'none'} className='scroll'>
+                <HStack spacing={5} p={2}>
+                    {toolboxData.map((data, index) => (
+                        <Button
+                            key={index}
+                            border={data.type === toolSelected ? '1px solid #FFFFFF' : 'none'}
+                            background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
+                            borderRadius={'30px'}
+                            minW={'150px'}
+                            _hover={{
+                                border: '1px solid #FFFFFF',
+                            }}
+                            onClick={() => setToolSelected(data.type)}>
+                            <TextWrapper text={data.buttonText} Fcolor='#FFFFFF' align='center' fontFamily='Prototype' />
+                        </Button>
+                    ))}
+                </HStack>
+            </Flex>
 
             {toolSelected === '' ? <Image src={Default} w={700} /> :
-                <Flex maxW={'900px'} minH={'400px'} background={'white'} borderRadius={10}>
+                <Flex maxW={'900px'} maxH={'400px'} background={'white'} borderRadius={10}>
                     <Flex flex={0.4}>
                         <Image src={selectedTool?.image} alt='multisender' />
                     </Flex>

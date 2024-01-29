@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Flex, HStack } from '@chakra-ui/react'
+import { Button, Flex, HStack, useMediaQuery } from '@chakra-ui/react'
 import TextWrapper from '../components/TextWrapper';
 
 import addBase from '../assets/images/HowTo/addBase.svg';
@@ -27,42 +27,110 @@ const dataArray = [
 
 const HowToSection = () => {
     const [openModal, setOpenModal] = React.useState(false);
+    const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
+
     return (
         <Flex minH={'110vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} >
             <VideoModal openModal={openModal} closeModal={() => setOpenModal(false)} videoSrc='' />
-            <TextWrapper text='how to' fontFamily='Prototype' fontSize={60} Fcolor='#2C70FE' align='center' className='m-b-8' />
+            <TextWrapper text='how to' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#2C70FE' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FF7802' align='center' className='m-b-16' />
-            <HStack spacing={5}>
-                {dataArray.map((data, index) => (
-                    <Flex
-                        key={index}
-                        justifyContent={'center'}
-                        alignItems={'flex-end'}
-                        backgroundImage={data.image}
-                        backgroundSize="cover"
-                        backgroundRepeat="no-repeat"
-                        minH={'500px'}
-                        minW={'400px'}
-                        borderRadius={16}
-                        pb={3}
-                        cursor={'pointer'}
-                    >
-                        <Button
-                            background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
-                            borderRadius={'30px'}
-                            minW={'150px'}
-                            _hover={{
-                                border: '1px solid #FFFFFF',
-                            }}
-                            onClick={() => setOpenModal(true)}
+            {!isLargerThan720 ? (
+                <>
+                    <HStack spacing={5} mb={3}>
+                        {dataArray
+                            .filter((data, index) => index < 2)
+                            .map((data, index) => (
+                                <Flex
+                                    key={index}
+                                    justifyContent={'center'}
+                                    alignItems={'flex-end'}
+                                    backgroundImage={data.image}
+                                    backgroundSize="cover"
+                                    backgroundRepeat="no-repeat"
+                                    minH={'300px'}
+                                    minW={'150px'}
+                                    borderRadius={16}
+                                    pb={3}
+                                    cursor={'pointer'}
+                                >
+                                    <Button
+                                        background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
+                                        borderRadius={'30px'}
+                                        minW={'50px'}
+                                        _hover={{
+                                            border: '1px solid #FFFFFF',
+                                        }}
+                                        onClick={() => setOpenModal(true)}
+                                    >
+                                        <TextWrapper text={data.buttonText} Fcolor='#FFFFFF' align='center' />
+                                    </Button>
+                                </Flex>
+                            ))
+                        }
+                    </HStack >
+                    {dataArray
+                        .filter((data, index) => index === 2)
+                        .map((data, index) => (
+                            <Flex
+                                key={index}
+                                justifyContent={'center'}
+                                alignItems={'flex-end'}
+                                backgroundImage={data.image}
+                                backgroundSize="cover"
+                                backgroundRepeat="no-repeat"
+                                minH={'300px'}
+                                minW={'150px'}
+                                borderRadius={16}
+                                pb={3}
+                                cursor={'pointer'}
+                            >
+                                <Button
+                                    background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
+                                    borderRadius={'30px'}
+                                    minW={'50px'}
+                                    _hover={{
+                                        border: '1px solid #FFFFFF',
+                                    }}
+                                    onClick={() => setOpenModal(true)}
+                                >
+                                    <TextWrapper text={data.buttonText} Fcolor='#FFFFFF' align='center' />
+                                </Button>
+                            </Flex>
+                        ))
+                    }
+                </>
+            ) : (
+                <HStack spacing={5}>
+                    {dataArray.map((data, index) => (
+                        <Flex
+                            key={index}
+                            justifyContent={'center'}
+                            alignItems={'flex-end'}
+                            backgroundImage={data.image}
+                            backgroundSize="cover"
+                            backgroundRepeat="no-repeat"
+                            minH={'500px'}
+                            minW={'400px'}
+                            borderRadius={16}
+                            pb={3}
+                            cursor={'pointer'}
                         >
-                            <TextWrapper text={data.buttonText} Fcolor='#FFFFFF' align='center' />
-                        </Button>
-                    </Flex>
-                ))
-                }
-
-            </HStack >
+                            <Button
+                                background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
+                                borderRadius={'30px'}
+                                minW={'50px'}
+                                _hover={{
+                                    border: '1px solid #FFFFFF',
+                                }}
+                                onClick={() => setOpenModal(true)}
+                            >
+                                <TextWrapper text={data.buttonText} Fcolor='#FFFFFF' align='center' />
+                            </Button>
+                        </Flex>
+                    ))
+                    }
+                </HStack >
+            )}
 
         </Flex >
     )

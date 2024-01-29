@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, HStack } from '@chakra-ui/react'
+import { Box, Button, Flex, Image, HStack, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 import TextWrapper from '../components/TextWrapper'
 
@@ -87,17 +87,19 @@ const toshiLinks2 = [
 
 
 const ToshiLinksSection = () => {
+    const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
+
     return (
-        <Box minH={'125vh'} pt={'10vh'} >
-            <TextWrapper text='Toshi’s favourite LINKS' fontFamily='Prototype' fontSize={60} Fcolor='#FFFFFF' align='center' />
-            <Flex p={5} mt={10} overflow={'scroll'} className='scroll' mb={5}>
+        <Box minH={'125vh'} pt={'5vh'}>
+            <TextWrapper text='Toshi’s favourite LINKS' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#FFFFFF' align='center' />
+            <Flex p={5} mt={5} overflow={'scroll'} className='scroll' mb={5}>
                 {toshiLinks.map((item, index) => (
                     <Flex
                         key={index}
                         flexDirection={'column'}
                         alignItems={'center'}
-                        minW={300}
-                        minH={200}
+                        minW={isLargerThan720 ? 300 : 200}
+                        minH={isLargerThan720 ? 200 : 100}
                         p={4}
                         background='linear-gradient(180deg, #0052FE 63%, #2C70FE 100%)'
                         boxShadow={'0px 4px 20px #FFFFFF inset'}
@@ -127,13 +129,14 @@ const ToshiLinksSection = () => {
                     </Flex>
                 ))}
             </Flex>
-            <Flex justifyContent={'center'} mb={10}>
+            <Flex justifyContent={'center'} mb={10} flexDirection={isLargerThan720 ? 'row' : 'column'} alignItems={'center'}>
                 <Button
                     border={'1px solid #FFFFFF'}
                     background={'none'}
                     borderRadius={'30px'}
                     w={200}
-                    mr={5}
+                    mr={isLargerThan720 ? 5 : 0}
+                    mb={isLargerThan720 ? 0 : 5}
                     _hover={{
                         background: 'linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)',
                     }}>
@@ -150,22 +153,63 @@ const ToshiLinksSection = () => {
                     <TextWrapper text='Toshi’s stickerpack' fontFamily='Prototype' Fcolor='#FFFFFF' />
                 </Button>
             </Flex>
-            <Flex justifyContent={'center'}>
-                <HStack spacing={10}>
-                    {toshiLinks2.map((item, index) => (
-                        <Flex
-                            key={index}
-                            flexDirection={'column'}
-                            justifyContent={'center'}
-                            alignItems={'center'}
-                            cursor={'pointer'}
-                            onClick={() => window.open(item.redirect, '_blank')}>
-                            <Image src={item.image} alt={item.image} objectFit={'contain'} mb={5} />
-                            <TextWrapper text={item.title} fontSize={16} Fcolor='#FFFFFF' align='center' />
-                        </Flex>
-                    ))}
-                </HStack>
-            </Flex>
+            {isLargerThan720 ?
+                (
+                    <Flex justifyContent={'center'}>
+                        <HStack spacing={10}>
+                            {toshiLinks2.map((item, index) => (
+                                <Flex
+                                    key={index}
+                                    flexDirection={'column'}
+                                    justifyContent={'center'}
+                                    alignItems={'center'}
+                                    cursor={'pointer'}
+                                    onClick={() => window.open(item.redirect, '_blank')}>
+                                    <Image src={item.image} alt={item.image} objectFit={'contain'} mb={5} />
+                                    <TextWrapper text={item.title} fontSize={16} Fcolor='#FFFFFF' align='center' />
+                                </Flex>
+                            ))}
+                        </HStack>
+                    </Flex>
+                ) : (
+
+                    <Flex justifyContent={'center'} flexDirection={'column'} alignItems={'center'}>
+                        <HStack spacing={20} pb={2}>
+                            {toshiLinks2
+                                .filter((item, index) => index < 3)
+                                .map((item, index) => (
+                                    <Flex
+                                        key={index}
+                                        flexDirection={'column'}
+                                        justifyContent={'center'}
+                                        alignItems={'center'}
+                                        cursor={'pointer'}
+                                        maxW={30}
+                                        onClick={() => window.open(item.redirect, '_blank')}>
+                                        <Image src={item.image} alt={item.image} objectFit={'contain'} mb={5} />
+                                        <TextWrapper text={item.title} fontSize={12} Fcolor='#FFFFFF' align='center' />
+                                    </Flex>
+                                ))}
+                        </HStack>
+                        <HStack spacing={20} >
+                            {toshiLinks2
+                                .filter((item, index) => index >= 3)
+                                .map((item, index) => (
+                                    <Flex
+                                        key={index}
+                                        flexDirection={'column'}
+                                        justifyContent={'center'}
+                                        alignItems={'center'}
+                                        cursor={'pointer'}
+                                        maxW={20}
+                                        onClick={() => window.open(item.redirect, '_blank')}>
+                                        <Image src={item.image} alt={item.image} objectFit={'contain'} mb={5} />
+                                        <TextWrapper text={item.title} fontSize={12} Fcolor='#FFFFFF' align='center' />
+                                    </Flex>
+                                ))}
+                        </HStack>
+                    </Flex>
+                )}
 
         </Box >
     )

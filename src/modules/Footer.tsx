@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, HStack, Image } from '@chakra-ui/react'
+import { Box, Flex, HStack, Image, useMediaQuery } from '@chakra-ui/react'
 
 import ToshiLogo from '../assets/images/Toshi_Text.png';
 
@@ -8,11 +8,12 @@ import Telegram from '../assets/icons/socials/social-telegram.svg';
 import Medium from '../assets/icons/socials/social-medium.svg';
 
 const Footer = () => {
-    return (
-        <Flex alignItems="center" justifyContent="space-between">
-            <Flex flex={0.3}>
+    const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
 
-            </Flex>
+    return (
+        <Flex alignItems="center" justifyContent={isLargerThan720 ? "space-between" : 'center'} pt={isLargerThan720 ? 0 : 5}>
+            {isLargerThan720 && <Flex flex={0.3} />}
+
             <HStack spacing={5}>
                 <Flex p={1} borderRadius={'40px'} border={'1px solid #0052FE'} justifyContent={'center'} alignItems={'center'}>
                     <Image
@@ -42,13 +43,15 @@ const Footer = () => {
                     />
                 </Flex>
             </HStack>
-            <Box >
-                <Image
-                    src={ToshiLogo}
-                    alt="toshi"
-                    width={250}
-                />
-            </Box>
+            {isLargerThan720 &&
+                <Box>
+                    <Image
+                        src={ToshiLogo}
+                        alt="toshi"
+                        width={250}
+                    />
+                </Box>
+            }
         </Flex>
     )
 }
