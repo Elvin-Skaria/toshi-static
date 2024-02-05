@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                     </Box>
 
                     {/* Links */}
-                    <Flex justifyContent="space-between" flex={0.3}>
+                    <Flex justifyContent="space-between" flex={0.3} mr={10}>
                         <Link href="#">
                             <TextWrapper text='toshi tools' fontFamily='Prototype' />
                         </Link>

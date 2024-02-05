@@ -89,7 +89,7 @@ const ToolBoxSection = () => {
     return (
         <Flex minH={'100vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} >
             <TextWrapper text='Toshi’s toolbox' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#FFFFFF' align='center' className='m-b-8' />
-            <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FFFFFF' align='center' className='m-b-16' />
+            <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' fontSize={16} Fcolor='#FFFFFF' align='center' className='m-b-16' fontWeight={'bold'} />
 
             <Flex overflow={'auto'} w={'100%'} mb={5} justifyContent={isLargerThan720 ? 'center' : 'none'} className='scroll'>
                 <HStack spacing={5} p={2}>
