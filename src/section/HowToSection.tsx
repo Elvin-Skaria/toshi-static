@@ -33,7 +33,6 @@ const HowToSection = () => {
         <Flex minH={'110vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} >
             <VideoModal openModal={openModal} closeModal={() => setOpenModal(false)} videoSrc='' />
             <TextWrapper text='how to' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#2C70FE' align='center' className='m-b-8' />
-            <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' Fcolor='#FF7802' align='center' className='m-b-16' />
             {!isLargerThan720 ? (
                 <>
                     <HStack spacing={5} mb={3}>
@@ -114,6 +113,11 @@ const HowToSection = () => {
                             borderRadius={16}
                             pb={3}
                             cursor={'pointer'}
+                            _hover={{
+                                transform: 'scale(1.05)',
+                                transition: 'transform 0.5s',
+                            }}
+                            onClick={() => setOpenModal(true)}
                         >
                             <Button
                                 background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'

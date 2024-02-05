@@ -26,7 +26,7 @@ export const App = () => {
         minHeight="550vh"
         flexDirection={'column'}
       >
-        {isLargerThan720 && <Header />}
+        <Header />
         <HeroSection />
         <ToshiLinksSection />
         <HowToSection />
