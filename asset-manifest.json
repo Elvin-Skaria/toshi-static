@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/toshi-static/static/css/main.830c5484.css",
-    "main.js": "/toshi-static/static/js/main.74cec110.js",
+    "main.css": "/toshi-static/static/css/main.d595aece.css",
+    "main.js": "/toshi-static/static/js/main.af66fcfd.js",
     "static/js/787.f98a6655.chunk.js": "/toshi-static/static/js/787.f98a6655.chunk.js",
     "static/media/full_background.svg": "/toshi-static/static/media/full_background.f817bcd9b3ce464417fce8e14a543cd8.svg",
     "static/media/tools-launchpad.svg": "/toshi-static/static/media/tools-launchpad.d973e92b569787cc0d6f931ab87bedb7.svg",
@@ -28,14 +28,15 @@
     "static/media/social-twitter.svg": "/toshi-static/static/media/social-twitter.a10931daf1014cde13253c3a391cf31a.svg",
     "static/media/coinmarketcap.svg": "/toshi-static/static/media/coinmarketcap.3ed489770b90092d3fef960efbd2c614.svg",
     "static/media/social-telegram.svg": "/toshi-static/static/media/social-telegram.27733f3a91a2bb683d5ecf219acdee1b.svg",
+    "static/media/hamburger.svg": "/toshi-static/static/media/hamburger.d938da2ae27dded65b757637f89a324e.svg",
     "index.html": "/toshi-static/index.html",
     "static/media/social-medium.svg": "/toshi-static/static/media/social-medium.2756022e4e4554df338b16adb8ed4425.svg",
-    "main.830c5484.css.map": "/toshi-static/static/css/main.830c5484.css.map",
-    "main.74cec110.js.map": "/toshi-static/static/js/main.74cec110.js.map",
+    "main.d595aece.css.map": "/toshi-static/static/css/main.d595aece.css.map",
+    "main.af66fcfd.js.map": "/toshi-static/static/js/main.af66fcfd.js.map",
     "787.f98a6655.chunk.js.map": "/toshi-static/static/js/787.f98a6655.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.830c5484.css",
-    "static/js/main.74cec110.js"
+    "static/css/main.d595aece.css",
+    "static/js/main.af66fcfd.js"
   ]
 }
