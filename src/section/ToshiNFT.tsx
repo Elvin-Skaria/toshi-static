@@ -6,7 +6,7 @@ const ToshiNFT = () => {
     const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
 
     return (
-        <Flex minH={isLargerThan720 ? '121vh' : '102vh'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'} pt={'20vh'}  >
+        <Flex minH={isLargerThan720 ? '121vh' : '102vh'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'} pt={'20vh'} id='nfts'>
             <TextWrapper text='Toshi’s NFTs' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#FFFFFF' align='center' />
             <TextWrapper text='Collections' fontFamily='Prototype' fontSize={isLargerThan720 ? 100 : 60} Fcolor='#FF9B00' align='center' />
             <Box

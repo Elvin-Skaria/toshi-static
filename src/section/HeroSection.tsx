@@ -9,7 +9,7 @@ const HeroSection = () => {
     const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
 
     return (
-        <Flex justifyContent={'center'} minH={'100vh'}>
+        <Flex justifyContent={'center'} minH={'100vh'} id="hero">
             <Box w={isLargerThan720 ? '500px' : '300px'} pt={'17vh'} pl={isLargerThan720 ? '10vh' : '0vh'} >
                 <TextWrapper
                     text="Welcome to toshi town!"

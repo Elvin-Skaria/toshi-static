@@ -30,7 +30,7 @@ const HowToSection = () => {
     const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
 
     return (
-        <Flex minH={'110vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} >
+        <Flex minH={'110vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} id='how-to'>
             <VideoModal openModal={openModal} closeModal={() => setOpenModal(false)} videoSrc='' />
             <TextWrapper text='how to' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#2C70FE' align='center' className='m-b-8' />
             {!isLargerThan720 ? (

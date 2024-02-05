@@ -2,38 +2,46 @@ import {
   Box,
   ChakraProvider,
   theme,
-  useMediaQuery,
 } from "@chakra-ui/react"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
+
 import Header from "./modules/Header"
 import HeroSection from "./section/HeroSection"
 import ToshiLinksSection from "./section/ToshiLinksSection"
 import HowToSection from "./section/HowToSection"
+import ToshiNFT from "./section/ToshiNFT"
+import ToolBoxSection from "./section/ToolBoxSection"
+import Footer from "./modules/Footer"
 
 import FullBackground from "./assets/images/full_background.svg"
-import ToolBoxSection from "./section/ToolBoxSection"
-import ToshiNFT from "./section/ToshiNFT"
-import Footer from "./modules/Footer"
 
 
 export const App = () => {
-  const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
   return (
     <ChakraProvider theme={theme}>
-      <Box
-        backgroundImage={FullBackground}
-        backgroundSize={'cover'}
-        backgroundRepeat="no-repeat"
-        minHeight="550vh"
-        flexDirection={'column'}
-      >
-        <Header />
-        <HeroSection />
-        <ToshiLinksSection />
-        <HowToSection />
-        <ToolBoxSection />
-        <ToshiNFT />
-        <Footer />
-      </Box>
+      <Router>
+        <Routes>
+          <Route path="/" element={mainContent()} />
+        </Routes>
+      </Router>
     </ChakraProvider>
   )
 }
+
+const mainContent = () => (
+  <Box
+    backgroundImage={FullBackground}
+    backgroundSize={'cover'}
+    backgroundRepeat="no-repeat"
+    minHeight="550vh"
+    flexDirection={'column'}
+  >
+    <Header />
+    <HeroSection />
+    <ToshiLinksSection />
+    <HowToSection />
+    <ToolBoxSection />
+    <ToshiNFT />
+    <Footer />
+  </Box>
+)

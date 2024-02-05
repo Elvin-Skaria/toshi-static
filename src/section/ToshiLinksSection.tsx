@@ -90,7 +90,7 @@ const ToshiLinksSection = () => {
     const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
 
     return (
-        <Flex flexDirection={'column'} minH={'125vh'} justifyContent={isLargerThan720 ? 'center' : 'initial'}>
+        <Flex flexDirection={'column'} minH={'125vh'} justifyContent={isLargerThan720 ? 'center' : 'initial'} id='links'>
             <TextWrapper text='Toshi’s favourite LINKS' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#FFFFFF' align='center' />
             <Flex p={5} mt={5} overflow={'scroll'} className='scroll' mb={isLargerThan720 ? 20 : 0}>
                 {toshiLinks.map((item, index) => (

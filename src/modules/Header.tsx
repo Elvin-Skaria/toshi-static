@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import { Box, Flex, Link, Button, Image, useMediaQuery, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerFooter, DrawerBody, VStack } from '@chakra-ui/react';
 import TextWrapper from '../components/TextWrapper';
 
@@ -7,6 +8,8 @@ import Twitter from '../assets/icons/socials/social-twitter.svg';
 import Telegram from '../assets/icons/socials/social-telegram.svg';
 import Medium from '../assets/icons/socials/social-medium.svg';
 import HamburgerIcon from '../assets/icons/misc/hamburger.svg';
+
+
 
 const Header: React.FC = () => {
     const [isLargerThan1240] = useMediaQuery("(min-width: 1240px)");
@@ -36,21 +39,21 @@ const Header: React.FC = () => {
 
                     {/* Links */}
                     <Flex justifyContent="space-between" flex={0.3} mr={10}>
-                        <Link href="#">
+                        <HashLink smooth to="#toolbox">
                             <TextWrapper text='toshi tools' fontFamily='Prototype' />
-                        </Link>
-                        <Link href="#">
+                        </HashLink>
+                        <HashLink smooth to="#how-to">
                             <TextWrapper text='how to' fontFamily='Prototype' />
-                        </Link>
-                        <Link href="#">
+                        </HashLink>
+                        <HashLink smooth to="#nfts">
                             <TextWrapper text='nfts' fontFamily='Prototype' />
-                        </Link>
-                        <Link href="#">
+                        </HashLink>
+                        <HashLink smooth to="#links">
                             <TextWrapper text='links' fontFamily='Prototype' />
-                        </Link>
-                        <Link href="#">
+                        </HashLink>
+                        <HashLink smooth to="#">
                             <TextWrapper text='team' fontFamily='Prototype' />
-                        </Link>
+                        </HashLink>
                     </Flex>
 
                     <Flex justifyContent="space-between" flex={0.1}>
