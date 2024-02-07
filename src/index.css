@@ -45,25 +45,12 @@
   animation: primary 8s linear infinite;
 }
 
-.secondary {
-  animation: secondary 8s linear infinite;
-}
-
 @keyframes primary {
   from {
     left: 0%;
   }
   to {
     left: -135%;
-  }
-}
-
-@keyframes secondary {
-  from {
-    left: 135%;
-  }
-  to {
-    left: 0%;
   }
 }
 
@@ -77,5 +64,20 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .primary {
+    animation: primary 8s linear infinite;
+  }
+
+  @keyframes primary {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -620%;
+    }
   }
 }

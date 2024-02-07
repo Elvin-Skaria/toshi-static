@@ -89,13 +89,15 @@ const toshiLinks2 = [
 const ToshiLinksSection = () => {
     const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
 
+    const repeatedArray = toshiLinks.concat(toshiLinks)
+
     return (
         <Flex flexDirection={'column'} minH={'125vh'} justifyContent={isLargerThan720 ? 'center' : 'initial'} id='links'>
             <TextWrapper text='Toshi’s favourite LINKS' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#FFFFFF' align='center' />
 
             <Flex p={5} mt={5} position={'relative'} height={'15rem'} overflowX={'hidden'} mb={isLargerThan720 ? 5 : 0}>
                 <Flex className='mover-1 primary'>
-                    {toshiLinks.map((item, index) => (
+                    {repeatedArray.map((item, index) => (
                         <Flex
                             key={index}
                             flexDirection={'column'}
@@ -131,45 +133,6 @@ const ToshiLinksSection = () => {
                         </Flex>
                     ))}
                 </Flex>
-                <Flex className='mover-1 secondary'>
-                    {toshiLinks.map((item, index) => (
-                        <Flex
-                            key={index}
-                            flexDirection={'column'}
-                            alignItems={'center'}
-                            w={isLargerThan720 ? 300 : 200}
-                            minH={isLargerThan720 ? 200 : 100}
-                            p={4}
-                            background='linear-gradient(180deg, #0052FE 63%, #2C70FE 100%)'
-                            boxShadow={'0px 4px 20px #FFFFFF inset'}
-                            borderRadius={'10px'}
-                            opacity={0.9}
-                            mr={5}
-                            cursor={'pointer'}
-                            _hover={{
-                                boxShadow: '0px 4px 20px #FFFFFF inset, 0px 0px 8px 4px #27D2E9',
-                            }}
-                            onClick={() => window.open(item.redirect, '_blank')}
-                        >
-                            <Image src={item.image} alt={item.image} aspectRatio={'3/2'} objectFit={'contain'} width={'150px'} />
-                            <TextWrapper
-                                text={item.title}
-                                fontFamily='Prototype'
-                                fontSize={20}
-                                Fcolor='#FFFFFF'
-                                align='center'
-                                className='m-b-4'
-                            />
-                            <TextWrapper
-                                text={item.desc}
-                                fontSize={12}
-                                Fcolor='#FFFFFF'
-                                align='center' />
-                        </Flex>
-                    ))}
-                </Flex>
-
-
             </Flex>
 
             <Flex justifyContent={'center'} mb={10} flexDirection={isLargerThan720 ? 'row' : 'column'} alignItems={'center'}>
