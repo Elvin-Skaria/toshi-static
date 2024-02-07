@@ -17,8 +17,8 @@ const toolboxData = [
         buttonText: 'Token Locker',
         image: TokenLocker,
         subTitle: 'Multisender 2.0 the best ever made',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
         redirect: ''
     },
     {
@@ -26,8 +26,8 @@ const toolboxData = [
         buttonText: 'Liquidity Locker',
         image: TokenLocker,
         subTitle: 'Multisender 2.0 the best ever made',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
         redirect: ''
     },
     {
@@ -35,8 +35,8 @@ const toolboxData = [
         buttonText: 'Multisender',
         image: Multisender,
         subTitle: 'Multisender 2.0 the best ever made',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
         redirect: ''
     },
     {
@@ -44,8 +44,8 @@ const toolboxData = [
         buttonText: 'Swap',
         image: Swap,
         subTitle: 'Multisender 2.0 the best ever made',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
         redirect: ''
     },
     {
@@ -53,8 +53,8 @@ const toolboxData = [
         buttonText: 'Token Launcher',
         image: TokenLauncher,
         subTitle: 'Multisender 2.0 the best ever made',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
         redirect: ''
     },
     {
@@ -62,8 +62,8 @@ const toolboxData = [
         buttonText: 'Launchpad',
         image: Launchpad,
         subTitle: 'Multisender 2.0 the best ever made',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+        subDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  ut lab Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
         redirect: ''
     },
 ]
