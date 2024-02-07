@@ -107,7 +107,7 @@ const ToshiLinksSection = () => {
                             boxShadow={'0px 4px 20px #FFFFFF inset'}
                             borderRadius={'10px'}
                             opacity={0.9}
-                            mr={5}
+                            mr={6}
                             cursor={'pointer'}
                             _hover={{
                                 boxShadow: '0px 4px 20px #FFFFFF inset, 0px 0px 8px 4px #27D2E9',
