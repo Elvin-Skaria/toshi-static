@@ -34,25 +34,48 @@
 
 /* animation */
 
+.mover-1 {
+  overflow: auto;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+
+.primary {
+  animation: primary 8s linear infinite;
+}
+
+.secondary {
+  animation: secondary 8s linear infinite;
+}
+
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -135%;
+  }
+}
+
+@keyframes secondary {
+  from {
+    left: 135%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
 .reveal {
-  position: relative;
-  opacity: 0;
+  animation: fadeIn 10s;
 }
 
-.reveal.active {
-  opacity: 1;
-}
-.active.fade-bottom {
-  animation: fade-bottom 1s ease-in;
-}
-
-@keyframes fade-bottom {
+@keyframes fadeIn {
   0% {
-    transform: translateY(50px);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
   }
 }

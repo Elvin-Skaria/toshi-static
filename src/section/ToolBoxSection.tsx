@@ -87,7 +87,7 @@ const ToolBoxSection = () => {
     }
 
     return (
-        <Flex minH={'100vh'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'} id='toolbox'>
+        <Flex minH={'100vh'} flexDirection={'column'} id='toolbox'>
             <TextWrapper text='Toshi’s toolbox' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#FFFFFF' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' fontSize={16} Fcolor='#FFFFFF' align='center' className='m-b-16' fontWeight={'bold'} />
 
@@ -110,57 +110,62 @@ const ToolBoxSection = () => {
                 </HStack>
             </Flex>
 
-            {toolSelected === '' ? <Image src={Default} w={700} /> :
-                <Flex maxW={'900px'} maxH={'400px'} background={'white'} borderRadius={10}>
-                    <Flex flex={0.4}>
-                        <Image src={selectedTool?.image} alt='multisender' />
+            <Flex justifyContent={'center'}>
+                {toolSelected === '' ?
+                    <Image src={Default} w={700} className='reveal' />
+                    :
+                    <Flex maxW={'900px'} maxH={'400px'} background={'white'} borderRadius={10} p={4}>
+                        <Flex flex={0.4}>
+                            <Image src={selectedTool?.image} alt='multisender' />
+                        </Flex>
+                        <Flex flex={0.6} px={4} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
+                            <TextWrapper
+                                text={`Toshi's ${selectedTool?.buttonText}`}
+                                fontFamily='Prototype'
+                                fontSize={32}
+                                Fcolor='#2C70FE'
+                                className='m-b-8' />
+                            <TextWrapper
+                                text={selectedTool?.desc || ''}
+                                className='m-b-16' />
+                            <TextWrapper
+                                text={selectedTool?.subTitle || ''}
+                                fontFamily='Prototype'
+                                fontSize={16}
+                                Fcolor='#2C70FE'
+                                className='m-b-16' />
+                            <TextWrapper
+                                text={selectedTool?.subDesc || ''}
+                                className='m-b-32' />
+                            <ButtonGroup spacing={3}>
+                                <Button
+                                    background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
+                                    borderRadius={'30px'}
+                                    minW={'150px'}
+                                    _hover={{
+                                        border: '1px solid #FFFFFF',
+                                    }}
+                                >
+                                    <TextWrapper text='See tool live' fontFamily='Prototype' Fcolor='#FFFFFF' />
+                                </Button>
+                                <Button
+                                    border={'1px solid #0052FE'}
+                                    background='none'
+                                    borderRadius={'30px'}
+                                    minW={'150px'}
+                                    _hover={{
+                                        border: '1px solid #FFFFFF',
+                                    }}
+                                    onClick={() => onNextTool()}
+                                >
+                                    <TextWrapper text='Next tool' fontFamily='Prototype' Fcolor='#0052FE' />
+                                </Button>
+                            </ButtonGroup>
+                        </Flex>
                     </Flex>
-                    <Flex flex={0.6} px={4} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
-                        <TextWrapper
-                            text={`Toshi's ${selectedTool?.buttonText}`}
-                            fontFamily='Prototype'
-                            fontSize={32}
-                            Fcolor='#2C70FE'
-                            className='m-b-8' />
-                        <TextWrapper
-                            text={selectedTool?.desc || ''}
-                            className='m-b-16' />
-                        <TextWrapper
-                            text={selectedTool?.subTitle || ''}
-                            fontFamily='Prototype'
-                            fontSize={16}
-                            Fcolor='#2C70FE'
-                            className='m-b-16' />
-                        <TextWrapper
-                            text={selectedTool?.subDesc || ''}
-                            className='m-b-32' />
-                        <ButtonGroup spacing={3}>
-                            <Button
-                                background='linear-gradient(180deg, #0052FE 0%, #2C70FE 100%)'
-                                borderRadius={'30px'}
-                                minW={'150px'}
-                                _hover={{
-                                    border: '1px solid #FFFFFF',
-                                }}
-                            >
-                                <TextWrapper text='See tool live' fontFamily='Prototype' Fcolor='#FFFFFF' />
-                            </Button>
-                            <Button
-                                border={'1px solid #0052FE'}
-                                background='none'
-                                borderRadius={'30px'}
-                                minW={'150px'}
-                                _hover={{
-                                    border: '1px solid #FFFFFF',
-                                }}
-                                onClick={() => onNextTool()}
-                            >
-                                <TextWrapper text='Next tool' fontFamily='Prototype' Fcolor='#0052FE' />
-                            </Button>
-                        </ButtonGroup>
-                    </Flex>
-                </Flex>
-            }
+                }
+            </Flex>
+
 
 
         </Flex>

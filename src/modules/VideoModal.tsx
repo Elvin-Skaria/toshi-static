@@ -11,13 +11,13 @@ const VideoModal = (props: VideoModalProps) => {
     const { videoSrc, openModal, closeModal } = props;
 
     return (
-        <Modal isOpen={openModal} onClose={closeModal} size={'6xl'}>
+        <Modal isOpen={openModal} onClose={closeModal} size={'5xl'}>
             <ModalOverlay />
             <ModalContent>
-                <ModalCloseButton />
+                <ModalCloseButton color={'white'} />
                 <ModalBody>
                     <iframe
-                        width="1000"
+                        width="980"
                         height="600"
                         src="https://www.youtube.com/embed/k001JX-D-dA?si=F72nPMWR8hv1waB6&amp;controls=0"
                         title="YouTube video player"
