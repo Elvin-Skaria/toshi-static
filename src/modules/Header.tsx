@@ -18,15 +18,17 @@ const Header: React.FC = () => {
 
     if (isLargerThan1240) {
         return (
-            <Box
-                position="sticky"
-                top={0}
+            <Flex
+                position="fixed"
+                width={'100%'}
                 background="#FFFFFF78"
                 minHeight="50px"
                 backdropFilter="blur(5px)"
                 shadow={'0px 4px 4px rgba(0, 0, 0, 0.25)'}
             >
-                <Flex alignItems="center" justifyContent="space-between" padding="0 20px">
+                <Flex alignItems="center" justifyContent="space-between" padding="0 20px"
+                    width={'100%'}
+                >
                     <Box flex={0.4}>
                         <Image
                             src={ToshiLogo}
@@ -91,7 +93,7 @@ const Header: React.FC = () => {
                         <TextWrapper text='trade now' fontFamily='Prototype' Fcolor='#FFFFFF' />
                     </Button>
                 </Flex>
-            </Box>
+            </Flex>
         );
     } else {
         return (

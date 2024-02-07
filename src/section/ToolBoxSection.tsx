@@ -87,7 +87,7 @@ const ToolBoxSection = () => {
     }
 
     return (
-        <Flex minH={'100vh'} flexDirection={'column'} id='toolbox'>
+        <Flex minH={'100vh'} flexDirection={'column'} id='toolbox' justifyContent={isLargerThan720 ? 'center' : 'flex-start'} alignItems={isLargerThan720 ? 'center' : 'flex - start'}>
             <TextWrapper text='Toshi’s toolbox' fontFamily='Prototype' fontSize={isLargerThan720 ? 60 : 42} Fcolor='#FFFFFF' align='center' className='m-b-8' />
             <TextWrapper text='CLICK ON THE BUTTON AND DISCOVER MORE...' fontSize={16} Fcolor='#FFFFFF' align='center' className='m-b-16' fontWeight={'bold'} />
 
@@ -168,7 +168,7 @@ const ToolBoxSection = () => {
 
 
 
-        </Flex>
+        </Flex >
     )
 }
 
