@@ -25,6 +25,7 @@ const Header: React.FC = () => {
                 minHeight="50px"
                 backdropFilter="blur(5px)"
                 shadow={'0px 4px 4px rgba(0, 0, 0, 0.25)'}
+                zIndex={1000}
             >
                 <Flex alignItems="center" justifyContent="space-between" padding="0 20px"
                     width={'100%'}
