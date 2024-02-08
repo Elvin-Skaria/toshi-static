@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/toshi-static/static/css/main.08b19479.css",
-    "main.js": "/toshi-static/static/js/main.b01fcd26.js",
+    "main.js": "/toshi-static/static/js/main.a54c857a.js",
     "static/js/787.f98a6655.chunk.js": "/toshi-static/static/js/787.f98a6655.chunk.js",
     "static/media/full_background.svg": "/toshi-static/static/media/full_background.f817bcd9b3ce464417fce8e14a543cd8.svg",
     "static/media/tools-launchpad.svg": "/toshi-static/static/media/tools-launchpad.d973e92b569787cc0d6f931ab87bedb7.svg",
@@ -32,11 +32,11 @@
     "index.html": "/toshi-static/index.html",
     "static/media/social-medium.svg": "/toshi-static/static/media/social-medium.2756022e4e4554df338b16adb8ed4425.svg",
     "main.08b19479.css.map": "/toshi-static/static/css/main.08b19479.css.map",
-    "main.b01fcd26.js.map": "/toshi-static/static/js/main.b01fcd26.js.map",
+    "main.a54c857a.js.map": "/toshi-static/static/js/main.a54c857a.js.map",
     "787.f98a6655.chunk.js.map": "/toshi-static/static/js/787.f98a6655.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08b19479.css",
-    "static/js/main.b01fcd26.js"
+    "static/js/main.a54c857a.js"
   ]
 }
